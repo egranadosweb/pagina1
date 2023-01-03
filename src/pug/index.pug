@@ -1,0 +1,79 @@
+include mixin/_mixin
+
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  link(href='css/normalize.css' rel='stylesheet')
+  link(href='css/styles.css' rel='stylesheet')
+
+  title Pugjs Example Project
+  
+-
+  var resourcesPath = ''
+  var imagesPath = resourcesPath + 'images/'
+  var iconsPath = resourcesPath + 'icons/'
+  var pageClass = '';
+
+body(class="pageClass")
+
+    //-Header --------------------------------------------
+    header#header.header.header--transparent
+            nav.nav 
+                a(href="#").nav__logo
+                    img(src="./img/logo.png").nav__img
+
+                a(href="#").nav__open X
+
+                ul.nav__ul.nav__ul--slideout 
+                    li.nav__li: a.nav__a(href="") Inicio
+                    li.nav__li: a.nav__a(href="") Inicio
+                    li.nav__li: a.nav__a(href="") Inicio
+                    li.nav__li: a.nav__a(href="") Inicio
+                    li.nav__li: a.nav__a(href="") Inicio
+
+                    a(href="#").nav__close X
+    //-----------------------------------------------------------
+
+
+
+
+    //-Banner section ----------------------------------------------------- 
+    section#banner.banner 
+        figure.banner__figure 
+            img(src="./img/dota1.jpg" , width="100%").banner__img
+
+        .banner__cta 
+            h1.banner__h1 Libera tus instintos
+            span.banner__span Subtitulo del banner
+
+            .banner__buttons
+                a.button.button--danger.banner__button Productos
+                a.button.button--success.banner__button Envios nacionales
+    //-------------------------------------------------------------------
+
+
+
+
+    //-Productos section -------------------------------------------------------------------------------
+    section#productos.productos 
+        h2.productos__title Productos 
+        .productos__cards
+            //-LLamamos un mixin que nos genera una Card
+            +card("./img/productos/producto1.png","Chocolate Shokolade de Ganoderma","Rico chocolate de ganoderma de la marca gano excel","$95.000","$190.000 antes", "productos__card--absolute card--margin-r-1","Estimula el sistema inmune","Aumenta la energía y mejora el sueño","Retarda el envejecimiento y mejora la salud de la piel")
+            +card("./img/productos/producto2.png","Chocolate Shokolade de Ganoderma","Rico chocolate de ganoderma de la marca gano excel","$95.000","$190.000 antes", "productos__card--absolute card--margin-r-1","Estimula el sistema inmune","Aumenta la energía y mejora el sueño","Retarda el envejecimiento y mejora la salud de la piel")
+            +card("./img/productos/producto3.png","Chocolate Shokolade de Ganoderma","Rico chocolate de ganoderma de la marca gano excel","$95.000","$190.000 antes", "productos__card--absolute card--margin-r-1","Estimula el sistema inmune","Aumenta la energía y mejora el sueño","Retarda el envejecimiento y mejora la salud de la piel")
+            +card("./img/productos/producto4.jpg","Chocolate Shokolade de Ganoderma","Rico chocolate de ganoderma de la marca gano excel","$95.000","$190.000 antes", "productos__card--absolute card--margin-r-1","Estimula el sistema inmune","Aumenta la energía y mejora el sueño","Retarda el envejecimiento y mejora la salud de la piel")
+            +card("./img/productos/producto5.jpg","Chocolate Shokolade de Ganoderma","Rico chocolate de ganoderma de la marca gano excel","$95.000","$190.000 antes", "productos__card--absolute card--margin-r-1","Estimula el sistema inmune","Aumenta la energía y mejora el sueño","Retarda el envejecimiento y mejora la salud de la piel")
+            //-Botones para pasar los productos
+            .productos__control.productos__control--prev
+                a.productos__control-link(href="#") <
+            .productos__control.productos__control--next
+                a.productos__control-link(href="#") >
+    //---------------------------------------------------------------------------------------------------
+
+
+    script(src="./js/app.js")
+

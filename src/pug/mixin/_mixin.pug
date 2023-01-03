@@ -1,0 +1,18 @@
+
+
+mixin card(img, title, summary, price, subprice, clase, ...infos)
+
+    article.card.productos__card(class= clase)
+        .card__header 
+            img(src= img, width="100%").card__img
+        .card__body
+            h3.card__title= title
+            p.card__summary= summary
+            ul.card__details 
+                each info in infos 
+                    li.card__info= info
+            p.card__price= price
+                span.card__sub-price= subprice
+            .card__buttons
+                a.button.card__button.card__button--secondary(href="#") Más info 
+                a.button.card__button.card__button--primary(href="#") Add 

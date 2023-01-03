@@ -1,0 +1,85 @@
+
+
+
+
+//Header
+.header{
+    z-index: 20;
+    background-color: $color;
+    position: fixed;
+    //background-color: transparent;
+}
+.header--transparent {
+    background-color: transparent;
+}
+.header--hide{
+    transform: translateY(-200px);
+}
+.nav{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo{
+    
+}
+.nav__img{
+    height: 100%;
+    width: 70%;
+    margin: 1rem 0;
+}
+.nav__open{
+    color: #ffff;
+    padding: .5rem;
+}
+.nav__open--exit{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+}
+.nav__close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+}
+// .nav__check:checked ~ .nav__ul{
+//     transform: translateX(0%);
+// }
+.nav__ul{
+    //display: ;
+    z-index: 10;
+    background-color: rgb(177, 17, 65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    //transform: translateX(-130%) rotate(180deg);
+    transition: all ease 0.3s;
+
+    //Modificadores
+    &--slideout{
+        transform: translateX(-130%) rotate(180deg);
+    }
+    &--slidein{
+        transform: translateX(0%);
+    }
+}
+
+.nav__li{
+
+}
+.nav__a{
+    display: block;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+}
+
+
+
+
+

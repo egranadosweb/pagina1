@@ -1,0 +1,88 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+    font-family: $fuente;
+    background-color: #f2f2f2;
+    color: black;
+    height: 4500px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        color: $color2;
+    }
+
+    &:active {
+        text-decoration: none;
+    }
+}
+header{
+    width: 100%;
+    padding: 0 1rem;
+}
+h1 {
+    font-family: $fuente2;
+    font-size: 4rem;
+    line-height: 100%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 120%;
+}
+
+h4 {
+    font-size: .8rem;
+}
+
+h5 {
+    font-size: .7rem;
+}
+
+h6 {
+    font-size: .5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: gray;
+}
+
+section{
+    width: 100%;
+    //padding: 0 1rem;
+}
+
+span {
+
+}
+
+table {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}

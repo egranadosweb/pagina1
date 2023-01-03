@@ -1,0 +1,136 @@
+
+#productos{
+    z-index: 30;
+}
+
+.productos{}
+
+.productos__title{
+    color: $color;
+}
+
+.card{
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 22rem;//352px
+    height: 550px;
+    max-width: 100%;
+    background-color: #ffff;
+    color: #f2f2f2;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 6px black;
+    transition: all 0.5s;
+
+    &--margin-r-1{
+        margin-right: 1rem;
+    }
+}
+
+.productos__cards{
+    position: relative;
+    width: 22rem;
+    max-width: 89%;
+    margin: auto;
+    height: 550px;
+    overflow: hidden;
+}
+
+.productos__card{
+
+    &--absolute{
+        position: absolute;
+    }
+}
+
+.productos__control{
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    padding: .2rem;
+    color: $color;
+    &--prev{
+        left: 0;
+    }
+
+    &--next{
+        right: 0;
+    }
+}
+.productos__control-link{}
+
+.card__header{
+    height: 222px;
+    overflow: hidden;
+}
+
+.card__img{
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(10%);
+}
+
+.card__body{
+    height: 100%;
+    background-color:grayscale($color: #000000);
+    padding: 1rem;
+}
+
+.card__title{
+    text-shadow: $sombra-lg;
+    color: $color2;
+    font-size: 1.5rem;
+}
+
+.card__summary{
+    color: $color3;
+    margin-bottom: .5rem;
+}
+
+.card__details{
+    color: #f2f2f2;
+    margin-bottom: .5rem;
+    font-size: 1.2;
+    list-style: none;
+}
+
+.card__info{
+    font-size: 1.2;
+    &::before{
+        //color: black;
+        content: "\00BB";
+        margin-right: .2rem;
+    }
+}
+
+.card__price{
+    color: $color2;
+    font-size: 1.5rem;
+}
+
+.card__sub-price{
+    color: #f2f2f2;
+    font-size: 1rem;
+    margin-left: .5rem;
+    text-decoration: line-through;
+}
+
+.card__buttons{}
+
+.card__button{
+    &--primary{
+        background-color: $color;
+        &:hover {
+            background-color: darken($color, 10);
+            color: #f2f2f2
+        }
+    }
+
+    &--secondary{
+        background-color: $color2;
+        &:hover {
+            background-color: darken($color2, 10);
+            color: #f2f2f2
+        }
+    }   
+}
